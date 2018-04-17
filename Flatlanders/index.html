@@ -8,8 +8,13 @@
             <li class="list-group-item" ng-repeat="product in store.products">
                 <h3>{{product.name}}</h3>
                 <em class="pull-right">{{product.price | currency}}</em>
-                <div id="Gallery" ng-show="product.images.length > 0">
-                    <img ng-src="{{product.images[0]}}" />
+                <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+                    <img ng-src="{{product.images[gallery.getCurrent()]}}" />
+                    <ul class="list-inline thumbs">
+                        <li class="thumbnail" ng-repeat="image in product.images">
+                            <img ng-src="{{image}}" />
+                        </li>
+                    </ul>
                 </div>
                 <section ng-controller="PanelController as panel">
                     <ul class="nav nav-pills">
@@ -29,11 +34,13 @@
                     </div>
                     <div class="panel" ng-show="panel.isSelected(2)">
                         <h4>Specifications</h4>
-                        <p>None yet</p>
+                        <blockquote>Shine: {{product.shine}}</blockquote>
                     </div>
                     <div class="panel" ng-show="panel.isSelected(3)">
                         <h4>Reviews</h4>
-                        <p>None yet</p>
+                        <blockquote ng-repeat="review in products.reviews">
+
+                        </blockquote>
                     </div>
                 </section>
             </li>
