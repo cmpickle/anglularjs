@@ -6,16 +6,36 @@
     <body ng-controller="StoreController as store">
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="product in store.products">
-                <h3>
-                    {{product.name}}
-                    <em class="pull-right">{{product.price | currency}}</em>
+                <h3>{{product.name}}</h3>
+                <em class="pull-right">{{product.price | currency}}</em>
+                <div id="Gallery" ng-show="product.images.length > 0">
+                    <img ng-src="{{product.images[0]}}" />
+                </div>
+                <section ng-controller="PanelController as panel">
                     <ul class="nav nav-pills">
-                        <li> <a href ng-click="tab = 1">Description</a></li>
-                        <li> <a href ng-click="tab = 2">Specifications</a></li>
-                        <li> <a href ng-click="tab = 3">Reviews</a></li>
+                        <li ng-class="{ active: panel.isSelected(1) }"> 
+                            <a href ng-click="panel.selectTab(1)">Description</a>
+                        </li>
+                        <li ng-class="{ active: panel.isSelected(2) }"> 
+                            <a href ng-click="panel.selectTab(2)">Specifications</a>
+                        </li>
+                        <li ng-class="{ active: panel.isSelected(3) }">
+                            <a href ng-click="panel.selectTab(3)">Reviews</a>
+                        </li>
                     </ul>
-                    {{tab}}
-                </h3>
+                    <div class="panel" ng-show="panel.isSelected(1)">
+                        <h4>Description</h4>
+                        <p>{{product.description}}</p>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(2)">
+                        <h4>Specifications</h4>
+                        <p>None yet</p>
+                    </div>
+                    <div class="panel" ng-show="panel.isSelected(3)">
+                        <h4>Reviews</h4>
+                        <p>None yet</p>
+                    </div>
+                </section>
             </li>
         </ul>
         <!-- <div ng-repeat="product in store.products">
