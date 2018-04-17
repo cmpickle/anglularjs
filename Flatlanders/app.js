@@ -39,6 +39,13 @@
             shine: 8,
             images: [
                 "images/gem-01.gif"
+            ],
+            reviews: [
+                {
+                    stars: 5,
+                    body: "I love this gem!",
+                    author: "joe@example.org"
+                }
             ]
         },
         {
