@@ -5,3 +5,7 @@
 .ng-valid.ngdirty {
     border-color: #78FA89;
 }
+
+.panel-body {
+    padding: 15px;
+}
