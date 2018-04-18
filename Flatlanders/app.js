@@ -39,6 +39,13 @@
         };
     });
 
+    app.directive('productTitle', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'product-title.html'
+        };
+    });
+
     var gems = [
         {
             name: "Dodecahedron",

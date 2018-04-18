@@ -6,8 +6,7 @@
     <body ng-controller="StoreController as store">
         <ul class="list-group">
             <li class="list-group-item" ng-repeat="product in store.products">
-                <h3>{{product.name}}</h3>
-                <em class="pull-right">{{product.price | currency}}</em>
+                <h3><product-title></product-title></h3>
                 <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
                     <img ng-src="{{product.images[gallery.getCurrent()]}}" />
                     <ul class="list-inline thumbs">
