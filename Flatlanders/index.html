@@ -8,14 +8,16 @@
             <li class="list-group-item"> -->
                 <div class="col-sm-6 col-lg-4 ng-scope" ng-repeat="product in store.products">
                     <div class="panel panel-danger">
-                        <h3><product-title></product-title></h3>
+                        <div class="panel-heading">
+                            <h3><product-title></product-title></h3>
+                        </div>
                         <div class="panel-body">
                             <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
                                 <div class="img-wrap">
                                     <img class="img-circle center-block" ng-src="{{product.images[gallery.getCurrent()]}}" />
                                 </div>
-                                <ul class="img-thumbnails clearfix">
-                                    <li class="small-image pull-left thumbnail" ng-repeat="image in product.images">
+                                <ul class="list-inline list-unstyled text-center">
+                                    <li class="list-inline" ng-repeat="image in product.images">
                                         <img style="max-height: 75px;" ng-src="{{image}}" />
                                     </li>
                                 </ul>
