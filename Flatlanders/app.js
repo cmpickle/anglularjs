@@ -35,7 +35,7 @@
         this.addReview = function(product) {
             product.reviews.push(this.review);
             this.review = {};
-        }
+        };
     });
 
     var gems = [
