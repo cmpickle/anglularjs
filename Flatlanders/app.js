@@ -46,6 +46,27 @@
         };
     });
 
+    app.directive('productDescription', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'product-description.html'
+        };
+    });
+
+    app.directive('productSpecifications', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'product-specifications.html'
+        };
+    });
+
+    app.directive('productReviews', function() {
+        return {
+            restrict: 'E',
+            templateUrl: 'product-reviews.html'
+        };
+    });
+
     var gems = [{
         name: 'Azurite',
         description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
@@ -62,11 +83,15 @@
         reviews: [{
           stars: 5,
           body: "I love this gem!",
-          author: "joe@example.org"
+          author: "joe@example.org",
+          createdOn: "Apr 04, 2018"
+
         }, {
           stars: 1,
           body: "This gem sucks.",
-          author: "tim@example.org"
+          author: "tim@example.org",
+          createdOn: "Apr 04, 2018"
+
         }]
       }, {
         name: 'Bloodstone',
@@ -84,11 +109,13 @@
         reviews: [{
           stars: 3,
           body: "I think this gem was just OK, could honestly use more shine, IMO.",
-          author: "JimmyDean@example.org"
+          author: "JimmyDean@example.org",
+          createdOn: "Apr 04, 2018"
         }, {
           stars: 4,
           body: "Any gem with 12 faces is for me!",
-          author: "gemsRock@example.org"
+          author: "gemsRock@example.org",
+          createdOn: "Apr 04, 2018"
         }]
         }, {
           name: 'Zircon',
@@ -106,15 +133,18 @@
           reviews: [{
             stars: 1,
             body: "This gem is WAY too expensive for its rarity value.",
-            author: "turtleguyy@example.org"
+            author: "turtleguyy@example.org",
+            createdOn: "Apr 04, 2018"
           }, {
             stars: 1,
             body: "BBW: High Shine != High Quality.",
-            author: "LouisW407@example.org"
+            author: "LouisW407@example.org",
+            createdOn: "Apr 04, 2018"
           }, {
             stars: 1,
             body: "Don't waste your rubles!",
-            author: "nat@example.org"
+            author: "nat@example.org",
+            createdOn: "Apr 04, 2018"
           }]
       }];
 })();
