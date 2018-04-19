@@ -1,0 +1,11 @@
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\bin\Debug\netcoreapp2.0\FlatlandersAPI.deps.json
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\bin\Debug\netcoreapp2.0\FlatlandersAPI.runtimeconfig.json
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\bin\Debug\netcoreapp2.0\FlatlandersAPI.runtimeconfig.dev.json
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\bin\Debug\netcoreapp2.0\FlatlandersAPI.dll
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\bin\Debug\netcoreapp2.0\FlatlandersAPI.pdb
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.csproj.CoreCompileInputs.cache
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.AssemblyInfoInputs.cache
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.AssemblyInfo.cs
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.dll
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.pdb
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.csprojResolveAssemblyReference.cache

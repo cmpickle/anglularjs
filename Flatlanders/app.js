@@ -1,9 +1,15 @@
 (function(){
-    var app = angular.module('gemStore', ['store-products']);
+    let app = angular.module('gemStore', ['store-products']);
 
-    app.controller('StoreController', function() {
-        this.products = gems;
-    });
+    app.controller('StoreController', [ '$http',  function($http) {
+        let store = this;
+        store.products = gems;
+        // this.products = gems;
+
+        $http.get('http://localhost:50089/api/values').then(function(data) {
+            store.products = data.data;
+        });
+    }]);
 
     var gems = [{
         name: 'Azurite',
