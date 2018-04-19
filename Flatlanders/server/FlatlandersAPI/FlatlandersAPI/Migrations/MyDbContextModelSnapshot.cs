@@ -91,7 +91,7 @@ namespace FlatlandersAPI.Migrations
 
             modelBuilder.Entity("FlatlandersAPI.Models.Review", b =>
                 {
-                    b.HasOne("FlatlandersAPI.Models.Product")
+                    b.HasOne("FlatlandersAPI.Models.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductID");
                 });

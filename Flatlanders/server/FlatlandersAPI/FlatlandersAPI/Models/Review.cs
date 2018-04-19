@@ -12,5 +12,6 @@ namespace FlatlandersAPI.Models
         public string Body { get; set; }
         public string Author { get; set; }
         public string CreatedOn { get; set; }
+        public Product Product { get; set; }
     }
 }

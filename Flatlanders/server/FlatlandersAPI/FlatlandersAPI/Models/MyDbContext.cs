@@ -18,7 +18,8 @@ namespace FlatlandersAPI.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().HasMany(i => i.Reviews).WithOne();
+            modelBuilder.Entity<Product>().HasMany(p => p.Reviews).WithOne(r => r.Product);
+            modelBuilder.Entity<Product>().HasMany(p => p.Images).WithOne(i => i.Product);
         }
     }
 }

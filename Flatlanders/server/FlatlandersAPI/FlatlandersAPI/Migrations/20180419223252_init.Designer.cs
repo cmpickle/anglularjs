@@ -11,7 +11,7 @@ using System;
 namespace FlatlandersAPI.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20180419215939_init")]
+    [Migration("20180419223252_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -92,7 +92,7 @@ namespace FlatlandersAPI.Migrations
 
             modelBuilder.Entity("FlatlandersAPI.Models.Review", b =>
                 {
-                    b.HasOne("FlatlandersAPI.Models.Product")
+                    b.HasOne("FlatlandersAPI.Models.Product", "Product")
                         .WithMany("Reviews")
                         .HasForeignKey("ProductID");
                 });

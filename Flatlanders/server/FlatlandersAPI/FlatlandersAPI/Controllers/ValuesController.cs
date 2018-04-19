@@ -6,6 +6,7 @@ using FlatlandersAPI.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebSockets.Internal;
+using Microsoft.EntityFrameworkCore;
 
 namespace FlatlandersAPI.Controllers
 {
@@ -23,7 +24,8 @@ namespace FlatlandersAPI.Controllers
         [HttpGet]
         public IEnumerable<Product> Get()
         {
-            return _myDbContext.Products.ToList();
+            var products = _myDbContext.Products.Include(p=>p.Reviews).Include(p=>p.Images).ToList();
+            return products;
         }
 
         // GET api/values/5
