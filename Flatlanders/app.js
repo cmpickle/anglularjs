@@ -3,7 +3,7 @@
 
     app.controller('StoreController', [ '$http',  function($http) {
         let store = this;
-        store.products = gems;
+        store.products = [];
         // this.products = gems;
 
         $http.get('http://localhost:50089/api/values').then(function(data) {

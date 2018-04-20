@@ -1,15 +1,18 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FlatlandersAPI.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace FlatlandersAPI
 {
@@ -29,13 +32,17 @@ namespace FlatlandersAPI
                 .AddEntityFrameworkInMemoryDatabase()
                 .AddDbContext<MyDbContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Flatlanders")));
-                //.AddEntityFrameworkSqlServer()
-                //.AddDbContext<MyDbContext>(options =>
-                //    options.UseSqlServer(Configuration.GetConnectionString("Flatlanders")));
 
             services.AddCors();
 
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.OutputFormatters.Clear();
+                options.OutputFormatters.Add(new JsonOutputFormatter(new JsonSerializerSettings()
+                {
+                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                }, ArrayPool<char>.Shared));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

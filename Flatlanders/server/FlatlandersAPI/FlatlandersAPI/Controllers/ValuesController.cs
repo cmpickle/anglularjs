@@ -24,7 +24,7 @@ namespace FlatlandersAPI.Controllers
         [HttpGet]
         public IEnumerable<Product> Get()
         {
-            var products = _myDbContext.Products.Include(p=>p.Reviews).Include(p=>p.Images).ToList();
+            List<Product> products = _myDbContext.Products.Include(p=>p.reviews).Include(p=>p.images).ToList();
             return products;
         }
 

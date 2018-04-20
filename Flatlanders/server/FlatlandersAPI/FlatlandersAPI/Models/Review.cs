@@ -8,10 +8,10 @@ namespace FlatlandersAPI.Models
     public class Review
     {
         public int ReviewID { get; set; }
-        public int Stars { get; set; }
-        public string Body { get; set; }
-        public string Author { get; set; }
-        public string CreatedOn { get; set; }
-        public Product Product { get; set; }
+        public int stars { get; set; }
+        public string body { get; set; }
+        public string author { get; set; }
+        public string createdOn { get; set; }
+        public Product product { get; set; }
     }
 }

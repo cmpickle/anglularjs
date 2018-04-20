@@ -9,14 +9,14 @@ namespace FlatlandersAPI.Models
     public class Product
     {
         public string ProductID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int Shine { get; set; }
-        public Decimal Price { get; set; }
-        public int Rarity { get; set; }
-        public string Color { get; set; }
-        public int Faces { get; set; }
-        public ICollection<Image> Images { get; set; }
-        public ICollection<Review> Reviews { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public int shine { get; set; }
+        public Decimal price { get; set; }
+        public int rarity { get; set; }
+        public string color { get; set; }
+        public int faces { get; set; }
+        public ICollection<Image> images { get; set; }
+        public ICollection<Review> reviews { get; set; }
     }
 }

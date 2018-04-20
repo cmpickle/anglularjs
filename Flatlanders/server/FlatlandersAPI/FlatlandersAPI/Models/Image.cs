@@ -8,7 +8,7 @@ namespace FlatlandersAPI.Models
     public class Image
     {
         public int Id { get; set; }
-        public string ImageUrl { get; set; }
-        public Product Product { get; set; }
+        public string imageUrl { get; set; }
+        public Product product { get; set; }
     }
 }
