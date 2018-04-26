@@ -7,6 +7,9 @@
         })
         .when('/home', {
           templateUrl: 'wwwroot/templates/index.html'
+        })
+        .when('/hello', {
+          templateUrl: 'wwwroot/templates/hello.html'
         });
     }]);
 

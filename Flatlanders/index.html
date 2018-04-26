@@ -8,7 +8,25 @@
         <script type="text/javascript" src="wwwroot/scripts/app.js"></script>
         <script type="text/javascript" src="wwwroot/scripts/products.js"></script>
     </head>
-    <nav class="navbar navbar-inverse navbar-static-top"></nav>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                </button>
+                <a ng-href="/" class="navbar-brand">Flatlanders</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a ng-href="/">Home</a></li>
+                        <li><a ng-href="/#!/hello">Hello Page</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
     <body>
         <div ng-view></div>
     </body>
