@@ -32,9 +32,9 @@ namespace FlatlandersAPI.Models
                         faces = 14,
                         images = new List<Image>
                         {
-                            new Image { imageUrl = "images/gem-02.gif"},
-                            new Image { imageUrl = "images/gem-05.gif"},
-                            new Image { imageUrl = "images/gem-09.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-02.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-05.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-09.gif"},
                         },
                         reviews = new List<Review>
                         {
@@ -53,9 +53,9 @@ namespace FlatlandersAPI.Models
                         faces = 12,
                         images = new List<Image>
                         {
-                            new Image { imageUrl = "images/gem-01.gif"},
-                            new Image { imageUrl = "images/gem-03.gif"},
-                            new Image { imageUrl = "images/gem-04.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-01.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-03.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-04.gif"},
                         },
                         reviews = new List<Review>
                         {
@@ -74,9 +74,9 @@ namespace FlatlandersAPI.Models
                         faces = 6,
                         images = new List<Image>
                         {
-                            new Image { imageUrl = "images/gem-02.gif"},
-                            new Image { imageUrl = "images/gem-05.gif"},
-                            new Image { imageUrl = "images/gem-09.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-02.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-05.gif"},
+                            new Image { imageUrl = "wwwroot/images/gem-09.gif"},
                         },
                         reviews = new List<Review>
                         {

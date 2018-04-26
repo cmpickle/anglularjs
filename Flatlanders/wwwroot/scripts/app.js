@@ -17,7 +17,7 @@
     let store = this;
     store.products = [];
 
-    $http.get('http://localhost:50089/api/values').then(function (data) {
+    $http.get('http://localhost:50089/api/products').then(function (data) {
       store.products = data.data;
     });
   }]);

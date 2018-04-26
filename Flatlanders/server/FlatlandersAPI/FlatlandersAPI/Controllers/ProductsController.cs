@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using FlatlandersAPI.Models;
 using Microsoft.AspNetCore.Cors;
@@ -11,43 +13,50 @@ using Microsoft.EntityFrameworkCore;
 namespace FlatlandersAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ProductsController : Controller
     {
         private MyDbContext _myDbContext;
 
-        public ValuesController(MyDbContext myDbContext)
+        public ProductsController(MyDbContext myDbContext)
         {
             _myDbContext = myDbContext;
         }
 
-        // GET api/values
+        // GET api/products
         [HttpGet]
         public IEnumerable<Product> Get()
         {
-            List<Product> products = _myDbContext.Products.Include(p=>p.reviews).Include(p=>p.images).OrderBy(p=>p.name).ToList();
-            return products;
+            return _myDbContext.Products.Include(p=>p.reviews).Include(p=>p.images).OrderBy(p=>p.name).ToList();
         }
 
-        // GET api/values/5
+        // GET api/products/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
+        // POST api/products
         [HttpPost]
-        public void Post([FromBody]string value)
+        public HttpResponseMessage Post([FromBody]Product newProduct)
         {
+            _myDbContext.Products.Add(newProduct);
+            foreach (var newProductImage in newProduct.images)
+            {
+                _myDbContext.Images.Add(newProductImage);
+            }
+            _myDbContext.SaveChanges();
+            return new HttpResponseMessage(HttpStatusCode.Created);
         }
 
-        // PUT api/values/5
+        // PUT api/products/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
+            //_myDbContext.Products.Include(p => p.images).FirstOrDefault(p => p.ProductID);
         }
 
-        // DELETE api/values/5
+        // DELETE api/products/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
