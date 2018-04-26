@@ -15,3 +15,7 @@
     padding-right: 5px;
     padding-left: 5px;
 }
+
+.panel-heading {
+    padding: 1px 15px;
+}
