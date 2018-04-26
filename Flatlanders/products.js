@@ -1,7 +1,7 @@
 (function() {
-    var app = angular.module('store-products', []);
+    angular.module('store-products', []);
 
-    app.controller("ReviewController", function() {
+    angular.module('store-products').controller("ReviewController", function() {
         this.review = {};
 
         this.addReview = function(product) {
@@ -11,35 +11,35 @@
         };
     });
     
-    app.directive('productTitle', function() {
+    angular.module('store-products').directive('productTitle', function() {
         return {
             restrict: 'E',
             templateUrl: 'product-title.html'
         };
     });
 
-    app.directive('productDescription', function() {
+    angular.module('store-products').directive('productDescription', function() {
         return {
             restrict: 'E',
             templateUrl: 'product-description.html'
         };
     });
 
-    app.directive('productSpecifications', function() {
+    angular.module('store-products').directive('productSpecifications', function() {
         return {
             restrict: 'E',
             templateUrl: 'product-specifications.html'
         };
     });
 
-    app.directive('productReviews', function() {
+    angular.module('store-products').directive('productReviews', function() {
         return {
             restrict: 'E',
             templateUrl: 'product-reviews.html'
         };
     });
 
-    app.directive('productPanels', function() {
+    angular.module('store-products').directive('productPanels', function() {
         return {
             restrict: 'E',
             templateUrl: 'product-panels.html',
@@ -59,7 +59,7 @@
         };
     });
 
-    app.directive('productGallery', function() {
+    angular.module('store-products').directive('productGallery', function() {
         return {
             restrict: 'E',
             templateUrl: "product-gallery.html",

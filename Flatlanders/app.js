@@ -1,10 +1,9 @@
 (function(){
-    let app = angular.module('gemStore', ['store-products']);
+    angular.module('gemStore', ['store-products']);
 
-    app.controller('StoreController', [ '$http',  function($http) {
+    angular.module('gemStore').controller('StoreController', [ '$http',  function($http) {
         let store = this;
         store.products = [];
-        // this.products = gems;
 
         $http.get('http://localhost:50089/api/values').then(function(data) {
             store.products = data.data;

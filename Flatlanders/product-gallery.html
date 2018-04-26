@@ -4,7 +4,7 @@
     </div>
     <ul class="list-inline list-unstyled text-center">
         <li class="list-inline" ng-repeat="image in product.images">
-            <img style="max-height: 75px;" ng-src="{{image.imageUrl}}" />
+            <img style="max-height: 75px;" ng-click="gallery.setCurrent($index)" ng-src="{{image.imageUrl}}" />
         </li>
     </ul>
 </div>
