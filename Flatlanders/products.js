@@ -14,35 +14,35 @@
     angular.module('store-products').directive('productTitle', function() {
         return {
             restrict: 'E',
-            templateUrl: 'product-title.html'
+            templateUrl: '/wwwroot/templates/product-title.html'
         };
     });
 
     angular.module('store-products').directive('productDescription', function() {
         return {
             restrict: 'E',
-            templateUrl: 'product-description.html'
+            templateUrl: '/wwwroot/templates/product-description.html'
         };
     });
 
     angular.module('store-products').directive('productSpecifications', function() {
         return {
             restrict: 'E',
-            templateUrl: 'product-specifications.html'
+            templateUrl: '/wwwroot/templates/product-specifications.html'
         };
     });
 
     angular.module('store-products').directive('productReviews', function() {
         return {
             restrict: 'E',
-            templateUrl: 'product-reviews.html'
+            templateUrl: '/wwwroot/templates/product-reviews.html'
         };
     });
 
     angular.module('store-products').directive('productPanels', function() {
         return {
             restrict: 'E',
-            templateUrl: 'product-panels.html',
+            templateUrl: '/wwwroot/templates/product-panels.html',
 
             controller:function() {
                 this.tab = 1;
@@ -62,7 +62,7 @@
     angular.module('store-products').directive('productGallery', function() {
         return {
             restrict: 'E',
-            templateUrl: "product-gallery.html",
+            templateUrl: "/wwwroot/templates/product-gallery.html",
             controller:function() {
                 this.current = 0;
         

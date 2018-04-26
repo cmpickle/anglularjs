@@ -2,26 +2,14 @@
 <html ng-app="gemStore">
     <head>
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    </head>
-    <body ng-controller="StoreController as store">
-        <!-- <ul class="list-group">
-            <li class="list-group-item"> -->
-                <div class="col-sm-6 col-lg-4 ng-scope" ng-repeat="product in store.products">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            <h3><product-title></product-title></h3>
-                        </div>
-                        <div class="panel-body">
-                            <product-gallery></product-gallery>
-                            <product-panels></product-panels>
-                        </div>
-                    </div>
-                </div>
-            <!-- </li>
-        </ul> -->
+        <link rel="stylesheet" href="app.css" />
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
         <script type="text/javascript" src="app.js"></script>
         <script type="text/javascript" src="products.js"></script>
-        <link rel="stylesheet" href="app.css" />
+    </head>
+    <nav class="navbar navbar-dark navbar-inverse"></nav>
+    <body>
+        <div ng-view></div>
     </body>
 </html>
