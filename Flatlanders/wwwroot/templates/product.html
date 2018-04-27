@@ -1,1 +1,6 @@
-<h1>Product</h1>
+<div class="content" ng-controller="ProductController as product">
+    <h1>{{product.productName}}</h1>
+    
+    <img ng-src="{{product.images[0].ImageUrl}}" class=".img-fluid.max-width: 100%; height: auto;" />
+
+</div>

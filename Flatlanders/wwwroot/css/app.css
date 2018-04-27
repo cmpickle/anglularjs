@@ -19,3 +19,11 @@
 .panel-heading {
     padding: 1px 15px;
 }
+
+.content {
+    padding: 0px 15px;
+}
+
+body {
+    padding-top: 70px;
+}
