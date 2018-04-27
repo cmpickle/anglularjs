@@ -1,6 +1,15 @@
 (function() {
     angular.module('store-products', []);
 
+    angular.module('store-products').controller("ProductController", function($http, $routeParams) {
+        let product = this;
+
+        $http({method:'GET', url: '/product/' + $routeParams.productId})
+        .success(function(data) {
+            controller.product = data;
+        })
+    });
+
     angular.module('store-products').controller("ReviewController", function() {
         this.review = {};
 

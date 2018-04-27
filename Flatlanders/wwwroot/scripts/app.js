@@ -6,10 +6,15 @@
           redirectTo: '/home'
         })
         .when('/home', {
-          templateUrl: 'wwwroot/templates/index.html'
+          templateUrl: '/wwwroot/templates/index.html'
         })
         .when('/hello', {
-          templateUrl: 'wwwroot/templates/hello.html'
+          templateUrl: '/wwwroot/templates/hello.html'
+        })
+        .when('/product/:id', {
+          templateUrl: '/wwwroot/templates/product.html',
+          controller: 'ProductController',
+          controllerAs: 'ctrl'
         });
     }]);
 

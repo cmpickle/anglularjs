@@ -31,9 +31,9 @@ namespace FlatlandersAPI.Controllers
 
         // GET api/products/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Product Get(string id)
         {
-            return "value";
+            return _myDbContext.Products.Include(p => p.reviews).SingleOrDefault(p => p.ProductID == id);
         }
 
         // POST api/products
