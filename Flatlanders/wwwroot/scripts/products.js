@@ -1,14 +1,19 @@
 (function() {
     angular.module('store-products', []);
 
-    angular.module('store-products').controller("ProductController", function($http, $routeParams) {
-        let product = this;
+    angular.module('store-products').controller("ProductController", ['$http', '$routeParams', function($http, $routeParams) {
+        let controller = this;
 
-        $http({method:'GET', url: '/product/' + $routeParams.productId})
-        .success(function(data) {
-            controller.product = data;
+        $http({method:'GET', url: 'http://localhost:50089/api/products/get/' + $routeParams.id})
+        .then(function(data) {
+            controller.product = data.data;
         })
-    });
+
+        $http({method:'GET', url: 'http://localhost:50089/api/products/reviewcount/' + $routeParams.id})
+        .then(function(data) {
+            controller.reviewCount = data.data;
+        })
+    }]);
 
     angular.module('store-products').controller("ReviewController", function() {
         this.review = {};

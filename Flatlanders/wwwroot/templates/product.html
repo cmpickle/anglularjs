@@ -1,6 +1,105 @@
-<div class="content" ng-controller="ProductController as product">
-    <h1>{{product.productName}}</h1>
-    
-    <img ng-src="{{product.images[0].ImageUrl}}" class=".img-fluid.max-width: 100%; height: auto;" />
+<div class="content" ng-controller="ProductController as ctrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img ng-src="{{ctrl.product.images[0].imageUrl}}" class="image-responsive center-block" />
 
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>{{ctrl.product.name}}</h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="description">{{ctrl.product.description}}</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="sr-only">Four out of Five Stars</span>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                        <span class="label label-success">{{ctrl.reviewCount}}</span>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 bottom-rule">
+                        <h2 class="product-price">{{ctrl.product.price | currency}}</h2>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <hr/>
+
+                <div class="row add-to-cart">
+                    <div class="col-md-5 product-qty">
+                        <span class="btn btn-default btn-lg btn-qty">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </span>
+                        <input class="btn btn-default btn-lg btn-qty" value="1" />
+                        <span class="btn btn-default btn-lg btn-qty">
+                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                        </span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-lg btn-brand btn-full-width">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <span class="monospaced">In Stock</span>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 text-center">
+                        <a class="monospaced" href="#">Add to Shopping List</a>
+                    </div>
+                </div>
+                <!-- end row -->
+                <div class="row">
+                    <div class="col-md-12 bottom-rule top-10"></div>
+                </div>
+                <!-- end row -->
+
+                <div class="row">
+                    <div class="col-md-12 top-10">
+                        <p>To order by telephone,
+                            <a href="tel:18005551212">please call 1-800-555-1212</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- end row -->
+
+                <hr/>
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#features" aria-controls="features" role="tab" data-toggle="tab">Features</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#notes" aria-controls="notes" role="tab" data-toggle="tab">Notes</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
 </div>

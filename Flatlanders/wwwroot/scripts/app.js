@@ -22,7 +22,7 @@
     let store = this;
     store.products = [];
 
-    $http.get('http://localhost:50089/api/products').then(function (data) {
+    $http.get('http://localhost:50089/api/products/getall').then(function (data) {
       store.products = data.data;
     });
   }]);
