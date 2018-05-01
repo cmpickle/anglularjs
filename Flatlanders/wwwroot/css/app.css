@@ -34,3 +34,8 @@ body {
 }
 
 .add-to-cart .btn { border-radius: 0; }
+
+.rating > i {
+    display: inline-block;
+    overflow: hidden;
+  }
