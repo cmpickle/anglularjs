@@ -1,5 +1,5 @@
 (function () {
-  angular.module('gemStore', ['store-products', 'ngRoute'])
+  angular.module('gemStore', ['store-products', 'notes', 'ngRoute', 'ngResource'])
     .config(['$routeProvider', function ($routeProvider) {
       $routeProvider
         .when('/', {
