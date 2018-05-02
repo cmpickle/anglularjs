@@ -1,6 +1,7 @@
 <ul>
     <h4>Reviews</h4>
-    <blockquote ng-repeat="review in product.reviews">
+    <blockquote ng-repeat="review in product.reviews" ng-controller="ReviewController as reviewCtrl">
+        <img ng-src="{{reviewCtrl.gravatarUrl(review.author)}}"/>
         <b>Stars: {{review.stars}}</b>
         {{review.body}}
         <cite class="clearfix">by: {{review.author}} on {{review.createdOn | date}}</cite>

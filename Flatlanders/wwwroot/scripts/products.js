@@ -49,7 +49,7 @@
         });
     }]);
 
-    angular.module('store-products').controller("ReviewController", function () {
+    angular.module('store-products').controller("ReviewController", ['Gravatar', function(Gravatar) {
         this.review = {};
 
         this.addReview = function (product) {
@@ -57,7 +57,11 @@
             product.reviews.push(this.review);
             this.review = {};
         };
-    });
+
+        this.gravatarUrl = function(email) {
+            return Gravatar(email);
+        }
+    }]);
 
     angular.module('store-products').directive('productTitle', function () {
         return {
