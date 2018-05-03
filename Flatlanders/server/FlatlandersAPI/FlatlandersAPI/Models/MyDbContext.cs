@@ -17,6 +17,7 @@ namespace FlatlandersAPI.Models
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Image> Images { get; set; }
         public DbSet<Note> Notes { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -151,6 +151,16 @@ namespace FlatlandersAPI.Models
                         Description = "nothing to see here, move along...",
                     }
                 );
+                context.Categories.AddRange(
+                    new Category
+                    {
+                        Type = "Test",
+                    },
+                    new Category
+                    {
+                        Type = "Special",
+                    }
+                );
 
 
             context.SaveChanges();
