@@ -139,18 +139,6 @@ namespace FlatlandersAPI.Models
                     }
 
                 );
-                context.Notes.AddRange(
-                    new Note
-                    {
-                        Title = "Hello World!",
-                        Description = "A note to greet the whole world!",
-                    },
-                    new Note
-                    {
-                        Title = "NULL",
-                        Description = "nothing to see here, move along...",
-                    }
-                );
                 context.Categories.AddRange(
                     new Category
                     {
@@ -159,6 +147,39 @@ namespace FlatlandersAPI.Models
                     new Category
                     {
                         Type = "Special",
+                    }
+                );
+                context.SaveChanges();
+                context.Notes.AddRange(
+                    new Note
+                    {
+                        Title = "Hello World!",
+                        Description = "A note to greet the whole world!",
+                        Category = context.Categories.FirstOrDefault(c => c.Type.Equals("Test")),
+                    },
+                    new Note
+                    {
+                        Title = "Note",
+                        Description = "This is an example note.",
+                        Category = context.Categories.FirstOrDefault(c => c.Type.Equals("Test")),
+                    },
+                    new Note
+                    {
+                        Title = "Jedi Code",
+                        Description = "There is no emotion, there is peace. There is no ignorance, there is knowledge. There is no passion, there is serenity. There is no chaos, there is harmony. There is no death, there is the Force",
+                        Category = context.Categories.FirstOrDefault(c => c.Type.Equals("Special")),
+                    },
+                    new Note
+                    {
+                        Title = "Sith Code",
+                        Description = "Peace is a lie, there is only passion. Through passion, I gain strength. Through strength, I gain power. Through power, I gain victory. Through victory, my chains are broken. The Force shall free me.",
+                        Category = context.Categories.FirstOrDefault(c => c.Type.Equals("Special")),
+                    },
+                    new Note
+                    {
+                        Title = "NULL",
+                        Description = "nothing to see here, move along...",
+                        Category = context.Categories.FirstOrDefault(c => c.Type.Equals("Special")),
                     }
                 );
 
