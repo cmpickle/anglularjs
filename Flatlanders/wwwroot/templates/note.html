@@ -1,5 +1,5 @@
 <div ng-controller="NotesController as noteCtrl">
-    <div ng-repeat="note in noteCtrl.notes">
+    <div ng-repeat="note in noteCtrl.notes | filter:search">
         <div class="card">
             <h2>{{note.Title}}</h2>
             <div class="card-body">

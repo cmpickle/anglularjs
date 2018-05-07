@@ -19,9 +19,23 @@
             return {
                 replace: true,
                 restrict: "E",
-                templateUrl: "/templates/note-category-select.html",
+                scope: {
+                    activeCategory: "=",
+                    notes: "="
+                },
+                templateUrl: "/wwwroot/templates/note-category-select.html",
                 link: function(scope, element, attrs) {
                     scope.categories = Category.query();
+                },
+                controller: function($scope) {
+                    this.getActiveCategory = function() {
+                        return $scope.activeCategory;
+                    };
+
+                    this.setActiveCategory = function(category) {
+                        $scope.activeCategory = category.Type;
+                    };
+                    return this;
                 }
             };
         });
@@ -30,9 +44,19 @@
         .directive("noteCategoryItem", function() {
             return {
                 restrict: "E",
-                templateUrl: "/templates/note-category-item.html",
+                templateUrl: "/wwwroot/templates/note-category-item.html",
                 scope: {
                     category: "="
+                },
+                require: "^noteCategorySelect",
+                link: function(scope, element, attrs, noteCategorySelectCtrl) {
+                    scope.makeActive = function() {
+                        noteCategorySelectCtrl.setActiveCategory(scope.category);
+                    };
+
+                    scope.categoryActive = function() {
+                        return noteCategorySelectCtrl.getActiveCategory() === scope.category.Type;
+                    };
                 }
             };
         });

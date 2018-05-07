@@ -1,5 +1,7 @@
 <div class="container">
     <h1>Hello New Page!</h1>
-    <note-category-select></note-category-select>
+    <input ng-model="search.Title" />
+    <p>{{activeCategory}}</p>
+    <note-category-select active-category='activeCategory' notes='notes'></note-category-select>
     <note></note>
 </div>
