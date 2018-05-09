@@ -16,8 +16,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-class="{'bg-danger': product.quantity<product.notificationquantity}" ng-repeat="product in productCtrl.products | orderBy:sortingOrder:reverse | filter:search">
-                <td></td>
+            <tr ng-class="{'bg-info': product.quantity<product.notificationquantity}" ng-repeat="product in productCtrl.products | orderBy:sortingOrder:reverse | filter:search">
+                <td><button type="button" class="btn btn-primary"><span class="fa fa-pencil"></span></button></td>
                 <td>{{product.productname}}</td>
                 <td>{{product.notificationquantity}}</td>
                 <td>{{product.color}}</td>
@@ -25,9 +25,9 @@
                 <td>{{product.size}}</td>
                 <td>{{product.sku}}</td>
                 <td>{{product.quantity}}</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><button type="button" class="btn btn-primary"><span class="fa fa-plus"></span></button></td>
+                <td><button type="button" class="btn btn-primary"><span class="fa fa-minus"></span></button></td>
+                <td><button type="button" class="btn btn-danger"><span class="fa fa-trash"></span></button></td>
             </tr>
         </tbody>
     </table>

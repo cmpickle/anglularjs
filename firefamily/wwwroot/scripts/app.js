@@ -7,6 +7,9 @@
                 })
                 .when('/home', {
                     templateUrl: '/wwwroot/templates/index.html'
+                })
+                .when('/new-product', {
+                    templateUrl: '/wwwroot/templates/new-product.html'
                 });
         }]);
 
