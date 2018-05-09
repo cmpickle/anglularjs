@@ -1,5 +1,5 @@
 (function() {
-    angular.module('firefamily', ['ngRoute'])
+    angular.module('firefamily', ['ngRoute', 'angular.filter'])
         .config(['$routeProvider', function($routeProvider) {
             $routeProvider
                 .when('/', {

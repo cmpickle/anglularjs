@@ -1,7 +1,40 @@
 <div class="container">
-    <h1>Create a New Product</h1>
-    <p>Product Name</p>
-    <input />
-    <p>SKU</p>
-    <input />
+    <form name="productForm" ng-submit="productForm.$valid">
+        <div class="col-md-4">
+            <h1>Create a New Product</h1>
+            <label>Product Name
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <label>SKU
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <label>Color
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <label>Trim Color
+                <input class="form-control mr-sm-4" />
+            </label>
+        </div>
+        <div class="col-md-4">
+            <br />
+            <label>Size
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <label>Price
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <label>Quantity
+                <input class="form-control mr-sm-4" />
+            </label>
+            <br />
+            <br />
+            <input type="submit" class="btn btn-primary" />
+
+        </div>
+    </form>
 </div>
