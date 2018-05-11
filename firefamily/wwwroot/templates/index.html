@@ -1,34 +1,70 @@
 <div class="container" ng-controller="ProductController as productCtrl">
-    <table class="table table-striped table-dark">
-        <thead>
-            <tr>
-                <th>Edit</th>
-                <th>Product Name</th>
-                <th>SKU</th>
-                <th>Color</th>
-                <th>Trim Color</th>
-                <th>Size</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Increment</th>
-                <th>Decrement</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-class="{'bg-info': product.quantity<product.notificationquantity}" ng-repeat="product in productCtrl.products | orderBy:sortingOrder:reverse | filterBy: ['productname + color + trimcolor + size', 'color + productname + size', 'color + trimcolor + product + size', 'sku',  'productname + size + color + trimcolor', 'size + productname + color + trimcolor', 'productname + trimcolor + color + size', 'trimcolor + color + productname + size', 'productname + color + size + trimcolor']: search">
-                <td><button type="button" class="btn btn-primary"><span class="fa fa-pencil"></span></button></td>
-                <td>{{product.productname}}</td>
-                <td>{{product.sku}}</td>
-                <td>{{product.color}}</td>
-                <td>{{product.trimcolor}}</td>
-                <td>{{product.size}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.quantity}}</td>
-                <td><button type="button" class="btn btn-primary"><span class="fa fa-plus"></span></button></td>
-                <td><button type="button" class="btn btn-primary"><span class="fa fa-minus"></span></button></td>
-                <td><button type="button" class="btn btn-danger"><span class="fa fa-trash"></span></button></td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="card-column">
+        <div class="card bg-dark">
+            <div class="card-body">
+                <label class="col-md-12">
+                    Search
+                    <form class="form-inline">
+                        <input class="form-control mr-sm-2 col-md-10" type="search" placeholder="Search" aria-label="Search" ng-model="search" />
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </label>
+
+            </div>
+
+        </div>
+
+        <div class="card bg-dark">
+            <!-- <div class="card-body"> -->
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th>Edit</th>
+                            <th>Product Name</th>
+                            <th>SKU</th>
+                            <th>Color</th>
+                            <th>Trim Color</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Inc</th>
+                            <th>Dec</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-class="{'bg-info': product.quantity<product.notificationquantity}" ng-repeat="product in productCtrl.products | orderBy:sortingOrder:reverse | filterBy: ['productname + color + trimcolor + size', 'color + productname + size', 'color + trimcolor + product + size', 'sku',  'productname + size + color + trimcolor', 'size + productname + color + trimcolor', 'productname + trimcolor + color + size', 'trimcolor + color + productname + size', 'productname + color + size + trimcolor']: search">
+                            <td>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="fa fa-pencil"></span>
+                                </button>
+                            </td>
+                            <td>{{product.productname}}</td>
+                            <td>{{product.sku}}</td>
+                            <td>{{product.color}}</td>
+                            <td>{{product.trimcolor}}</td>
+                            <td>{{product.size}}</td>
+                            <td>{{product.quantity}}</td>
+                            <td>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary">
+                                    <span class="fa fa-minus"></span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <span class="fa fa-trash"></span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        <!-- </div> -->
+
+    </div>
 </div>

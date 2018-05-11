@@ -5,3 +5,12 @@ body {
 h1, h2, h3, h4, p, label {
     color: #fff;
 }
+
+.card {
+    margin: 40px 0px;
+}
+
+.table {
+    /* max-width: 99%; */
+    margin: 15px 0px;
+}
