@@ -1,27 +1,33 @@
-<div class="container">
-    <form name="productForm" ng-submit="productForm.$valid">
+<div class="container" ng-controller="ProductController as productCtrl">
+    <form name="productForm" ng-submit="productCtrl.createProduct(product)" novalidate>
         <div class="col-md-4">
             <h1>Create a New Product</h1>
             <label>Product Name
-                <input class="form-control mr-sm-4" />
+                <input ng-model="product.productname" class="form-control mr-sm-4" />
             </label>
             <label>SKU
-                <input class="form-control mr-sm-4" />
-            </label>
-            <label>Color
-                <input class="form-control mr-sm-4" />
-            </label>
-            <label>Trim Color
-                <input class="form-control mr-sm-4" />
-            </label>
-            <label>Size
-                <input class="form-control mr-sm-4" />
-            </label>
-            <label>Price
-                <input class="form-control mr-sm-4" />
+                <input type="number" ng-model="product.sku" class="form-control mr-sm-4" />
             </label>
             <label>Quantity
-                <input class="form-control mr-sm-4" />
+                <input type="number" ng-model="product.quantity" class="form-control mr-sm-4" />
+            </label>
+            <label>Notification Quantity
+                <input type="number" ng-model="product.notificationquantity" class="form-control mr-sm-4" />
+            </label>
+            <label>Color
+                <input ng-model="product.color" class="form-control mr-sm-4" />
+            </label>
+            <label>Trim Color
+                <input ng-model="product.trimcolor" class="form-control mr-sm-4" />
+            </label>
+            <label>Size
+                <input ng-model="product.size" class="form-control mr-sm-4" />
+            </label>
+            <label>Dimensions
+                <input ng-model="product.dimensions" class="form-control mr-sm-4" />
+            </label>
+            <label>Price
+                <input type="number" ng-model="product.price" class="form-control mr-sm-4" />
             </label>
             <br />
             <br />

@@ -33,7 +33,7 @@
                 <tbody>
                     <tr ng-class="{'bg-info': product.quantity<product.notificationquantity}" ng-repeat="product in productCtrl.products | orderBy:sortingOrder:reverse | filterBy: ['productname + color + trimcolor + size', 'color + productname + size', 'color + trimcolor + product + size', 'sku',  'productname + size + color + trimcolor', 'size + productname + color + trimcolor', 'productname + trimcolor + color + size', 'trimcolor + color + productname + size', 'productname + color + size + trimcolor']: search">
                         <td>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" ng-click="productCtrl.edit(product)">
                                 <span class="fa fa-pencil"></span>
                             </button>
                         </td>
@@ -44,17 +44,17 @@
                         <td>{{product.size}}</td>
                         <td>{{product.quantity}}</td>
                         <td>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" ng-click="productCtrl.increment(product)">
                                 <span class="fa fa-plus"></span>
                             </button>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" ng-click="productCtrl.decrement(product)">
                                 <span class="fa fa-minus"></span>
                             </button>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-danger">
+                            <button type="button" class="btn btn-danger" ng-click="productCtrl.delete(product)">
                                 <span class="fa fa-trash"></span>
                             </button>
                         </td>
