@@ -1,6 +1,18 @@
 (function() {
-    angular.module('firefamily', ['ngRoute', 'angular.filter'])
-        .config(['$routeProvider', function($routeProvider) {
+    angular.module('firefamily', ['ngRoute', 'ui.router', 'angular.filter'])
+        .config(['$routeProvider', '$stateProvider', function($routeProvider, $stateProvider) {
+            $stateProvider
+                .state('search', {
+                    url: '/home',
+                    controller: 'ProductController as productCtrl',
+                    template: '/wwwroot/templates/index.html'
+                })
+                .state('query', {
+                    url: '/home?q',
+                    controller: 'ProductController as productCtrl',
+                    template: '/wwwroot/templates/index.html'
+                });
+
             $routeProvider
                 .when('/', {
                     redirectTo: '/home'
@@ -13,8 +25,13 @@
                 });
         }]);
 
-    angular.module('firefamily').controller("ProductController", ['$http', function($http) {
+    angular.module('firefamily').controller("ProductController", ['$http', '$scope', '$location', '$state', '$stateParams', function($http, $scope, $location, $state, $stateParams) {
         let controller = this;
+        $scope.search = $location.$$search.search;
+
+        controller.searchFunc = function(newVal) {
+            $location.search("search", newVal);
+        };
 
         $http({ method: 'GET', url: 'http://firefamily.dynu.net:8000/product'})
             .then(function(data) {
