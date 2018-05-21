@@ -32,18 +32,12 @@
         <a class="nav-link" ng-href="/#!/new-product">New Product</a>
       </li>
     </ul>
-    <form class="form-inline">
-      <span class="circle-icon bg-primary">
-        <span class="fa fa-plus"></span>
-      </span>
-      <label class="switch">
-        <input type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-      <span class="circle-icon bg-primary">
-          <span class="fa fa-minus"></span>
-        </span>
-      <input class="form-control mr-sm-2" type="text" placeholder="SKU" ng-model="sku">
+    <form id="scanner" ng-controller="InventoryController as inventoryCtrl" ng-submit="inventoryCtrl.scan(sku)" class="form-inline">
+      <select id="scannerOpt" class="form-control form-control-sm">
+        <option value="decrement">Decrement</option>
+        <option value="increment">Increment</option>
+      </select>
+      <input id="sku" class="form-control mr-sm-2" type="text" placeholder="SKU" ng-model="sku">
       <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Submit</button>
     </form>
   </div>
