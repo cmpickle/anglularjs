@@ -13151,7 +13151,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://dealersocket.jfrog.io/dealersocket/api/nuget/nuget": {}
       },
       "frameworks": {
         "netcoreapp2.0": {

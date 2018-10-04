@@ -8,4 +8,4 @@ C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netco
 C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.AssemblyInfo.cs
 C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.dll
 C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.pdb
-C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.csprojResolveAssemblyReference.cache
+C:\code\angular\Flatlanders\server\FlatlandersAPI\FlatlandersAPI\obj\Debug\netcoreapp2.0\FlatlandersAPI.csprojAssemblyReference.cache
